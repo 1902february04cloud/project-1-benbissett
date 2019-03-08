@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lambda Demo</title>
+
+    <!-- ICON -->
+    <link rel="icon" href="images/lambda.png" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+    <!-- Boostrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <strong class="navbar-brand">Book Database</strong>
+            </div>
+        </div>
+    </nav>
+
+    <!--Prime Panel -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Check if Prime</h3>
+            </div>
+            <div class="form-group">
+                <input id="number" placeholder="Number" class="form-control" />
+            </div>
+            <div id="primeMessage" class="response-center"></div>
+            <button id="calculate" class="btn btn-md btn-success btn-block">Calculate</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Create Book Entry -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Add Book to Database</h3>
+            </div>
+            <div class="form-group">
+                <input id="name" placeholder="Name" class="form-control" />
+                <input id="id" placeholder="ID" class="form-control" />
+                <input id="amount" placeholder="Cost" class="form-control" />
+                <input id="genre" placeholder="Genre" class="form-control" />
+            </div>
+            <div id="createMessage" class="response-center"></div>
+            <button id="create" class="btn btn-md btn-success btn-block">Create</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- List Books in Database -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>List Books in Database</h3>
+            </div>
+            <ul id="ec2List" class="list-group"></ul>
+            <button id="list" class="btn btn-md btn-success btn-block btn-list">GET</button>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Show image in Bucket -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Get Image</h3>
+            </div>
+            <div class="form-group">
+                <input id="img" placeholder="Image" class="form-control" />
+            </div>
+            <img id="projectImage" src="">
+            <button id="image" class="btn btn-md btn-success btn-block btn-list">GET</button>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- List Books in Genre in Database -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Get Books From Genre</h3>
+            </div>
+            <div class="form-group">
+                <input id="gen" placeholder="Genre" class="form-control" />
+            </div>
+            <ul id="genreList" class="list-group"></ul>
+            <button id="listGenre" class="btn btn-md btn-success btn-block btn-list">GET</button>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="js/primer.js"></script>
+    <script src="js/create-ec2.js"></script>
+    <script src="js/list-ec2.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/image.js"></script>
+    <script src="js/list-genre.js"></script>
+</body>
+</html>
